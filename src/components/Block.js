@@ -3,9 +3,9 @@ import './grid.css';
 
 export class Block extends React.Component {
 
-    notDone(e) {
+    notDone(message, e) {
         e.target.disabled = true;
-        alert("You Will be able to do that after full implementation");
+        alert(message);
         e.target.disabled = false;
 
     }
@@ -25,9 +25,10 @@ export class Block extends React.Component {
                     <span style={{ backgroundColor: 'blue', color: 'white', fontWeight: '900', display: 'block', padding: '0.5em', margin: '1em 0.2em' }}>
                         Amount for this is {this.props.ele.price} only
                                 </span>
-                    <div style={{ textAlign: "center" }}>
-                        <button className="btn btn-default " style={{ margin: '1em' }} onClick={this.notDone.bind(this)} > Purchase </button>
-                        <button className="btn btn-default " style={{ margin: '1em' }} onClick={this.notDone.bind(this)}>  Add To Cart </button>
+                    <div style={{ textAlign: "center", display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gridGap: '0.5em' }}>
+                        <button className="btn btn-default " style={{ width: '100%' }} onClick={this.notDone.bind(this, "You Will be able to do that after full implementation")} > Purchase </button>
+                        <button className="btn btn-default " style={{ width: '100%' }} onClick={this.notDone.bind(this, "You Will be able to do that after full implementation")}>  Add To Cart </button>
+                        <button className="btn btn-default " style={{ width: '100%' }} onClick={this.notDone.bind(this, "No furter Details available right now")}>  Detailed Info </button>
                     </div>
                 </div>
             </div>

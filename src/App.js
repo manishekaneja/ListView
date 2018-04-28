@@ -35,9 +35,8 @@ class App extends Component {
               <option value="st">Sale Target</option>
               <option value="oe">Only Exclusives</option>
               <option value="ef">Expensive first</option>
-              <option value="bs">Budget Serach</option>
+              <option value="bs">Budget Search</option>
               <option value="as">According to Size</option>
-
             </select>
             <button className={'btn btn-success'} onClick={() => { this.setState({ show: !this.state.show }) }}>{this.state.show === true ? 'Hide Details' : 'Show Details'}</button>
 

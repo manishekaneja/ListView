@@ -11,7 +11,7 @@ export class Main extends React.Component {
                 <div className={"g " + ((this.props.show === true ? 'gridDontshow' : 'gridShow2'))}>
                     {this.props.list.map((ele, index) => {
                         return (
-                            <Block show={this.props.show} key={"main" + index} ele={ele} />
+                            <Block  show={this.props.show} key={"main" + index} ele={ele} />
                         )
                     })}
                 </div>
